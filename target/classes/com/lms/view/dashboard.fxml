@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+
+<VBox spacing="30.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.lms.controller.DashboardController">
+   <children>
+      <Label styleClass="header-text" text="Library Overview Dashboard" />
+      <HBox spacing="20.0">
+         <children>
+            <VBox styleClass="card, card-blue" HBox.hgrow="ALWAYS">
+               <children>
+                  <Label text="Total Books" textFill="WHITE">
+                     <font>
+                        <Font size="16.0" />
+                     </font></Label>
+                  <Label fx:id="lblTotalBooks" text="0" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="32.0" />
+                     </font>
+                  </Label>
+               </children>
+            </VBox>
+            <VBox styleClass="card, card-green" HBox.hgrow="ALWAYS">
+               <children>
+                  <Label text="Total Members" textFill="WHITE">
+                     <font>
+                        <Font size="16.0" />
+                     </font></Label>
+                  <Label fx:id="lblTotalMembers" text="0" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="32.0" />
+                     </font>
+                  </Label>
+               </children>
+            </VBox>
+            <VBox styleClass="card, card-red" HBox.hgrow="ALWAYS">
+               <children>
+                  <Label text="Pending Fines" textFill="WHITE">
+                     <font>
+                        <Font size="16.0" />
+                     </font></Label>
+                  <Label fx:id="lblTotalFines" text="₹ 0.0" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="32.0" />
+                     </font>
+                  </Label>
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+      
+      <!-- Quick Info Bottom pane -->
+      <VBox fx:id="paneFineActions" spacing="10.0" styleClass="card" VBox.vgrow="ALWAYS">
+         <children>
+            <Label styleClass="sub-header" text="Outstanding Dues Management" />
+            <TableView fx:id="tblDues" prefHeight="200.0" VBox.vgrow="ALWAYS">
+              <columns>
+                <TableColumn fx:id="colTxId" prefWidth="60.0" text="Tx ID" />
+                <TableColumn fx:id="colMemberName" prefWidth="150.0" text="Student Name" />
+                <TableColumn fx:id="colBookTitle" prefWidth="150.0" text="Book Details" />
+                <TableColumn fx:id="colFineAmount" prefWidth="90.0" text="Amount Owed" />
+              </columns>
+               <columnResizePolicy>
+                  <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+               </columnResizePolicy>
+            </TableView>
+            <HBox alignment="CENTER_RIGHT">
+               <children>
+                  <Button fx:id="btnClearFine" mnemonicParsing="false" onAction="#handleClearPayment" styleClass="button-primary" text="Record Payment &amp; Clear Due" />
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+   <padding>
+      <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+   </padding>
+</VBox>

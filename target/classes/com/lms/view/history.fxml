@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox spacing="20.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.lms.controller.HistoryController">
+   <children>
+      <Label styleClass="header-text" text="All Transaction Records &amp; History" />
+      <TableView fx:id="tblHistory" VBox.vgrow="ALWAYS">
+        <columns>
+          <TableColumn fx:id="colId" prefWidth="50.0" text="ID" />
+          <TableColumn fx:id="colMember" prefWidth="150.0" text="Member Name" />
+          <TableColumn fx:id="colBook" prefWidth="180.0" text="Book Title" />
+          <TableColumn fx:id="colIssue" prefWidth="100.0" text="Issue Date" />
+          <TableColumn fx:id="colDue" prefWidth="100.0" text="Fine/Due Date" />
+          <TableColumn fx:id="colReturn" prefWidth="100.0" text="Return Date" />
+          <TableColumn fx:id="colFine" prefWidth="80.0" text="Fine Charged" />
+          <TableColumn fx:id="colStatus" prefWidth="100.0" text="Status" />
+        </columns>
+         <columnResizePolicy>
+            <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+         </columnResizePolicy>
+      </TableView>
+   </children>
+   <padding>
+      <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+   </padding>
+</VBox>

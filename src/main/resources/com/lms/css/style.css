@@ -1,0 +1,95 @@
+/* General Settings */
+
+.root {
+    -fx-font-family: 'Segoe UI', Roboto, sans-serif;
+    -fx-background-color: #f4f7fa;
+}
+/* Typography */
+.header-text {
+    -fx-font-size: 24px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #2c3e50;
+}
+
+.sub-header {
+    -fx-font-size: 16px;
+    -fx-text-fill: #7f8c8d;
+}
+
+/* Buttons */
+.button-primary {
+    -fx-background-color: #3498db;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-background-radius: 5px;
+    -fx-cursor: hand;
+    -fx-padding: 10 20;
+}
+.button-primary:hover {
+    -fx-background-color: #2980b9;
+}
+
+.button-nav {
+    -fx-background-color: transparent;
+    -fx-text-fill: #ecf0f1;
+    -fx-alignment: center-left;
+    -fx-padding: 10 20;
+    -fx-font-size: 14px;
+    -fx-cursor: hand;
+}
+.button-nav:hover {
+    -fx-background-color: #34495e;
+}
+
+/* Inputs */
+.text-field, .password-field {
+    -fx-background-radius: 5px;
+    -fx-padding: 8px;
+    -fx-border-color: #bdc3c7;
+    -fx-border-radius: 5px;
+    -fx-background-color: white;
+}
+.text-field:focused, .password-field:focused {
+    -fx-border-color: #3498db;
+}
+
+/* Cards for Dashboard */
+.card {
+    -fx-background-color: white;
+    -fx-background-radius: 10px;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.1), 10, 0, 0, 4);
+    -fx-padding: 20px;
+}
+
+.card-blue {
+    -fx-background-color: #3498db;
+    -fx-text-fill: white;
+}
+.card-green {
+    -fx-background-color: #2ecc71;
+    -fx-text-fill: white;
+}
+.card-red {
+    -fx-background-color: #e74c3c;
+    -fx-text-fill: white;
+}
+
+/* Sidebar */
+.sidebar {
+    -fx-background-color: #2c3e50;
+}
+
+/* Tables */
+.table-view {
+    -fx-background-color: transparent;
+    -fx-base: #ffffff;
+    -fx-control-inner-background: #ffffff;
+}
+.table-view .column-header-background {
+    -fx-background-color: #ecf0f1;
+}
+.table-view .column-header {
+    -fx-background-color: transparent;
+    -fx-font-weight: bold;
+    -fx-text-fill: #2c3e50;
+} */

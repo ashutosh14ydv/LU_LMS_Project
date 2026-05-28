@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="550.0" prefWidth="500.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.lms.controller.RegisterController">
+   <children>
+      <VBox alignment="CENTER" layoutX="70.0" layoutY="30.0" prefWidth="360.0" spacing="10.0" AnchorPane.bottomAnchor="30.0" AnchorPane.leftAnchor="70.0" AnchorPane.rightAnchor="70.0" AnchorPane.topAnchor="30.0">
+         <children>
+            <Label text="Student/Staff Registration">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <Separator prefWidth="200.0" />
+            <VBox spacing="5.0">
+               <children>
+                  <Label text="Username:" />
+                  <TextField fx:id="txtUsername" promptText="Choose username" />
+               </children>
+            </VBox>
+            <VBox spacing="5.0">
+               <children>
+                  <Label text="Full Name (Students):" />
+                  <TextField fx:id="txtFullName" />
+               </children>
+            </VBox>
+            <VBox spacing="5.0">
+               <children>
+                  <Label text="Roll Number (Students):" />
+                  <TextField fx:id="txtRollNo" />
+               </children>
+            </VBox>
+            <VBox spacing="5.0">
+               <children>
+                  <Label text="Password:" />
+                  <PasswordField fx:id="txtPassword" />
+               </children>
+            </VBox>
+            <VBox spacing="5.0">
+               <children>
+                  <Label text="Register As:" />
+                  <ComboBox fx:id="comboRole" maxWidth="1.7976931348623157E308" />
+               </children>
+            </VBox>
+            <Button fx:id="btnRegister" mnemonicParsing="false" onAction="#handleRegister" prefWidth="120.0" text="Register" />
+            <Hyperlink onAction="#goToLogin" text="Go Back to Login" />
+            <Label fx:id="lblMsg" textFill="RED" wrapText="true" />
+         </children>
+         <padding>
+            <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+         </padding>
+      </VBox>
+   </children>
+</AnchorPane>

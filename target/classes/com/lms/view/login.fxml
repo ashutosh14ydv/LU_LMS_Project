@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="400.0" prefWidth="500.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.lms.controller.LoginController">
+   <children>
+      <VBox alignment="CENTER" layoutX="100.0" layoutY="50.0" prefWidth="300.0" spacing="15.0" AnchorPane.bottomAnchor="50.0" AnchorPane.leftAnchor="100.0" AnchorPane.rightAnchor="100.0" AnchorPane.topAnchor="50.0">
+         <children>
+            <Label text="Library Management Login">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </Label>
+            <Separator prefWidth="200.0" />
+            <VBox spacing="5.0">
+               <children>
+                  <Label text="Username:" />
+                  <TextField fx:id="txtUsername" promptText="Enter Username" />
+               </children>
+            </VBox>
+            <VBox spacing="5.0">
+               <children>
+                  <Label text="Password:" />
+                  <PasswordField fx:id="txtPassword" promptText="Enter Password" />
+               </children>
+            </VBox>
+            <Button fx:id="btnLogin" mnemonicParsing="false" onAction="#handleLogin" prefWidth="100.0" text="Login" />
+            <Hyperlink onAction="#goToRegister" text="New User? Click to Register" />
+            <Label fx:id="lblMessage" textFill="RED" />
+         </children>
+         <padding>
+            <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+         </padding>
+      </VBox>
+   </children>
+</AnchorPane>

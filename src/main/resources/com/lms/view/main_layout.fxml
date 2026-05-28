@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane prefHeight="700.0" prefWidth="1100.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.lms.controller.MainLayoutController">
+   <left>
+      <VBox prefWidth="250.0" styleClass="sidebar" BorderPane.alignment="CENTER">
+         <children>
+            <VBox alignment="CENTER" prefHeight="120.0" spacing="5.0">
+               <children>
+                  <Label text="LU-LMS" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="28.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lblWelcome" text="Welcome, Admin" textFill="#bdc3c7" />
+               </children>
+            </VBox>
+            <Separator opacity="0.2" />
+            <VBox spacing="5.0" VBox.vgrow="ALWAYS">
+               <padding>
+                  <Insets top="20.0" />
+               </padding>
+               <children>
+                  <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#showDashboard" styleClass="button-nav" text="Dashboard" />
+                  <Button fx:id="btnManageBooks" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#showBooks" styleClass="button-nav" text="Manage Books" />
+                  <Button fx:id="btnManageMembers" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#showMembers" styleClass="button-nav" text="Manage Members" />
+                  <Button fx:id="btnIssue" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#showIssueBook" styleClass="button-nav" text="Issue Book" />
+                  <Button fx:id="btnReturn" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#showReturnBook" styleClass="button-nav" text="Return Book" />
+                  <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#showHistory" styleClass="button-nav" text="Transaction History" />
+               </children>
+            </VBox>
+            <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#handleLogout" styleClass="button-nav" style="-fx-background-color: #c0392b;" text="Logout" />
+         </children>
+      </VBox>
+   </left>
+   <center>
+      <StackPane fx:id="contentArea" style="-fx-background-color: #ecf0f1;" BorderPane.alignment="CENTER">
+         <padding>
+            <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+         </padding>
+      </StackPane>
+   </center>
+</BorderPane>
